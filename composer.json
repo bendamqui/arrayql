@@ -1,8 +1,8 @@
 {
-    "name": "bendamqui/php-package-template",
+    "name": "bendamqui/arrayql",
     "type": "library",
     "license": "MIT",
-    "description": "Boilerplate for PHP packages",
+    "description": "Array query library.",
     "authors": [
         {
             "name": "Benoît Michaud",
@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "php": "^7.2"
+        "php": "^7.2",
+        "ext-json": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5",
@@ -18,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Package\\": "src/"
+            "Bendamqui\\ArrayQl\\": "src/"
         }
     },
     "autoload-dev": {
