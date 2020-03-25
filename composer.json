@@ -1,0 +1,32 @@
+{
+    "name": "bendamqui/php-package-template",
+    "type": "library",
+    "license": "MIT",
+    "description": "Boilerplate for PHP packages",
+    "authors": [
+        {
+            "name": "Benoît Michaud",
+            "email": "bendamqui@icloud.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "Package\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox --colors=always"
+    }
+}

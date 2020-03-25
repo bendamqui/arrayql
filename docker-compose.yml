@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php:
+    build: .
+    env_file:
+      - .env
+    tty: true
+    volumes:
+      - ./:/var/www/html
