@@ -82,7 +82,7 @@ class ArrayQl extends ArrayChain
 
     private function applyEqual(string $key, $value): \Closure
     {
-        return fn($item) => $item[$key] === $value;
+        return fn($item) => isset($item[$key]) && $item[$key] === $value;
     }
 
     private function applyGroupBy(string $column): \Closure
@@ -102,7 +102,7 @@ class ArrayQl extends ArrayChain
 
     private function applyNotEqual(string $key, $value): \Closure
     {
-        return fn($item) => $item[$key] !== $value;
+        return fn($item) => !isset($item[$key]) || $item[$key] !== $value;
     }
 
     private function applyNotIn(string $key, array $values): \Closure
