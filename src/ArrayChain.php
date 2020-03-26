@@ -6,7 +6,7 @@ namespace Bendamqui\ArrayQl;
 class ArrayChain implements \Countable, \ArrayAccess, \IteratorAggregate, \JsonSerializable
 {
     /* @var array */
-    protected $array;
+    protected array $array;
 
     /**
      * ArrayChain constructor.
@@ -151,7 +151,10 @@ class ArrayChain implements \Countable, \ArrayAccess, \IteratorAggregate, \JsonS
         return $this->array;
     }
 
-    final public function yield()
+    /**
+     * @return \Generator
+     */
+    final public function yield(): \Generator
     {
         foreach ($this->array as $datum) {
             yield $datum;
