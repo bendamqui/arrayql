@@ -27,6 +27,7 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit --testdox --colors=always"
+        "test": "vendor/bin/phpunit --testdox --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html ./report --testdox --colors=always"
     }
 }

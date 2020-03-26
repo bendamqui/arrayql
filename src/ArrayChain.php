@@ -116,7 +116,7 @@ class ArrayChain implements \Countable, \ArrayAccess, \IteratorAggregate, \JsonS
      */
     final public function offsetSet($offset, $value)
     {
-        is_null($offset) ? $this->array[] = $offset : $this->array[$offset] = $value;
+        is_null($offset) ? $this->array[] = $value : $this->array[$offset] = $value;
     }
 
     /**
