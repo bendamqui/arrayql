@@ -1,23 +1,13 @@
-# Installation
+[![Build Status](https://travis-ci.com/bendamqui/arrayql.svg?branch=master)](https://travis-ci.com/bendamqui/arrayql)
+[![Coverage Status](https://coveralls.io/repos/github/bendamqui/arrayql/badge.svg?branch=master)](https://coveralls.io/github/bendamqui/arrayql?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/bendamqui/arrayql/v/stable.png)](https://packagist.org/packages/bendamqui/arrayql)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* `copy .env.example to .env`
-* `docker-compose up --build -d`
-* `docker-compose exec php composer install`
-* `docker-compose exec php composer test`
+## Installation
+`composer require bendamqui/arrayql`
 
-# Debug with PhpStorm
+## TODO
 
-* Add a php cli interpreter in Preference > Languages & Frameworks > PHP. Choose the
-php version from the container.
-
-* Set debug port to 9001 in Preference > Languages & Frameworks > PHP > Debug
-
-* Create a server in Preference > Languages & Frameworks > PHP > Server.
-    * name: Has to be equal to the value of PHP_IDE_CONFIG in the .env file.
-    * host: localhost
-    * port: 80
-    * Set the path mapping.
-
-    
+* Write documentation.   
 
 
