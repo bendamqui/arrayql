@@ -55,11 +55,6 @@ class ArrayQl extends ArrayChain
         return $this->filter($this->applyNotIn($key, $values));
     }
 
-    public function replace(string $column, $value): self
-    {
-        return $this->map($this->applyReplace($column, $value));
-    }
-
     public function exists(): bool
     {
         return $this->count() > 0;
@@ -108,11 +103,6 @@ class ArrayQl extends ArrayChain
     private function applyNotIn(string $key, array $values): \Closure
     {
         return fn($item) => empty($values) || !in_array($item[$key] ?? null, $values);
-    }
-
-    private function applyReplace(string $column, $value): \Closure
-    {
-        return fn($item) => array_replace($item, [$column => $value]);
     }
 
     private function applySelect(array $columns): \Closure

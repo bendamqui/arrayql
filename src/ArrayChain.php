@@ -80,11 +80,20 @@ class ArrayChain implements \Countable, \ArrayAccess, \IteratorAggregate, \JsonS
      * @param int $offset
      * @param int|null $length
      * @param bool $preserveKeys
-     * @return $this
+     * @return self
      */
     final public function slice(int $offset, ?int $length = null, bool $preserveKeys = false): self
     {
         return static::make(array_slice($this->array, $offset, $length, $preserveKeys));
+    }
+
+    /**
+     * @param array $replace
+     * @return self
+     */
+    final public function replace(array $replace): self
+    {
+        return $this->map(fn($row) => array_replace($row, $replace));
     }
 
     /**
