@@ -121,7 +121,7 @@ class ArrayQlTest extends TestCase
 
     public function testReplace()
     {
-        $result = ArrayQl::make($this->assoc)->replace('age', 30);
+        $result = ArrayQl::make($this->assoc)->replace(['age'=> 30]);
         assertInstanceOf(ArrayQl::class, $result);
         foreach ($result as $row) {
             self::assertEquals(30, $row['age']);
